@@ -18,11 +18,17 @@ namespace ToyotaApi.Controllers
         {
             return Ok(_carsService.GetCars());
         }
-        
-        [HttpGet("{model}")]
-        public IActionResult Get(string model)
+
+        [HttpGet("model/{model}")]
+        public IActionResult GetByModel(string model)
         {
             return Ok(_carsService.GetCarsByModel(model));
+        }
+        
+        [HttpGet("transmission/{transmission}")]
+        public IActionResult GetByTransmission(string transmission)
+        {
+            return Ok(_carsService.GetCarsByTransmission(transmission));
         }
     }
 }

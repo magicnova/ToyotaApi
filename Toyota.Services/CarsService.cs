@@ -31,7 +31,7 @@ namespace Toyota.Services
 
         public IList<Car> GetCarsByTransmission(string transmission)
         {
-            throw new System.NotImplementedException();
+            return _carsRepository.GetCarsByTransmission(transmission);
         }
 
         public Car GetCarById(int id)
