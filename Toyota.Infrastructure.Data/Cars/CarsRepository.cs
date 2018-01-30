@@ -37,6 +37,13 @@ namespace Toyota.Infrastructure.Data.Cars
             return cars.Where(where => where.Transmission.ToLower() == transmission.ToLower() ).ToList();
         }
 
+        public IList<Car> GetCarsByEngine(string engine)
+        {
+            var factory = new CarsFactory();
+            var cars = factory.CreateCars();
+            return cars.Where(where => where.Engine.ToLower() == engine.ToLower() ).ToList();
+        }
+
         public Car GetCarById(int id)
         {
             var factory = new CarsFactory();

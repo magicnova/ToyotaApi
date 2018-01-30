@@ -9,6 +9,7 @@ namespace Toyota.Infrastructure.Data.Cars.Interfaces
         IList<Car> GetCarsByModel(string model);
         IList<Car> GetCarsByYear(int year);
         IList<Car> GetCarsByTransmission(string transmission);
+        IList<Car> GetCarsByEngine(string engine);
         Car GetCarById(int id);
     }
 }

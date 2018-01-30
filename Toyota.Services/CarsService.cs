@@ -34,6 +34,11 @@ namespace Toyota.Services
             return _carsRepository.GetCarsByTransmission(transmission);
         }
 
+        public IList<Car> GetCarsByEngine(string engine)
+        {
+            return _carsRepository.GetCarsByEngine(engine);
+        }
+
         public Car GetCarById(int id)
         {
             return _carsRepository.GetCarById(id);
