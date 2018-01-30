@@ -13,5 +13,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toyota.Domain\Toyota.Domain.csproj" />
+    <ProjectReference Include="..\Toyota.IoC\Toyota.IoC.csproj">
+      <Project>{57649F2D-DC72-4737-84D9-6F20350DC0C7}</Project>
+      <Name>Toyota.IoC</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

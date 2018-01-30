@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toyota.Services", "Toyota.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toyota.Infrastructure.Data", "Toyota.Infrastructure.Data\Toyota.Infrastructure.Data.csproj", "{0C3CD3F6-9FBF-4DA7-B626-94652D0DF878}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toyota.IoC", "Toyota.IoC\Toyota.IoC.csproj", "{57649F2D-DC72-4737-84D9-6F20350DC0C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{0C3CD3F6-9FBF-4DA7-B626-94652D0DF878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C3CD3F6-9FBF-4DA7-B626-94652D0DF878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C3CD3F6-9FBF-4DA7-B626-94652D0DF878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57649F2D-DC72-4737-84D9-6F20350DC0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57649F2D-DC72-4737-84D9-6F20350DC0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57649F2D-DC72-4737-84D9-6F20350DC0C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57649F2D-DC72-4737-84D9-6F20350DC0C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,4 +2,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toyota.Domain\Toyota.Domain.csproj">
+      <Project>{E8FD698F-3379-479A-9319-DB6F62D2FE58}</Project>
+      <Name>Toyota.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

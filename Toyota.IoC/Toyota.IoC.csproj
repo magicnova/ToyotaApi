@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toyota.Domain\Toyota.Domain.csproj">
+      <Project>{E8FD698F-3379-479A-9319-DB6F62D2FE58}</Project>
+      <Name>Toyota.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toyota.Infrastructure.Data\Toyota.Infrastructure.Data.csproj">
+      <Project>{0C3CD3F6-9FBF-4DA7-B626-94652D0DF878}</Project>
+      <Name>Toyota.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toyota.Services\Toyota.Services.csproj">
+      <Project>{B6EEEC47-88E2-4A41-B0AA-C05877CAE60A}</Project>
+      <Name>Toyota.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
