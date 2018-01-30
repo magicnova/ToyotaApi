@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Toyota.Domain.Interfaces;
 
 namespace ToyotaApi.IOC
 {
@@ -6,6 +7,7 @@ namespace ToyotaApi.IOC
     {
         public void Module(IServiceCollection services)
         {
+            services.AddTransient<ICarsService, ICarsService>();
         }
     }
 }
