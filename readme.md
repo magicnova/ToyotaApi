@@ -7,11 +7,11 @@
 
 ## Routes
 
-/api/toyota : **GetAll**
-/api/toyota/model/{model}: **GetByModel**
-/api/toyota/transmission/{transmission}: **GetByTransmission**
-/api/toyota/engine/{engine}: **GetByEngine**
-/api/toyota/year/{year} : **GetByYear**
-/api/toyota/{id} : **GetById**
+- /api/toyota : **GetAll**
+- /api/toyota/model/{model}: **GetByModel**
+- /api/toyota/transmission/{transmission}: **GetByTransmission**
+- /api/toyota/engine/{engine}: **GetByEngine**
+- /api/toyota/year/{year} : **GetByYear**
+- /api/toyota/{id} : **GetById**
 
 

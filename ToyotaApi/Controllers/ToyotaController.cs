@@ -16,37 +16,79 @@ namespace ToyotaApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_carsService.GetCars());
+            var cars = _carsService.GetCars();
+            
+            if (cars.Count > 0)
+            {
+                return Ok();    
+            }
+
+            return NoContent();
         }
 
         [HttpGet("model/{model}")]
         public IActionResult GetByModel(string model)
         {
-            return Ok(_carsService.GetCarsByModel(model));
+            var cars = _carsService.GetCarsByModel(model);
+
+            if (cars.Count > 0)
+            {
+                return Ok(cars);    
+            }
+            
+            return NoContent();
         }
         
         [HttpGet("transmission/{transmission}")]
         public IActionResult GetByTransmission(string transmission)
         {
-            return Ok(_carsService.GetCarsByTransmission(transmission));
+            var cars = _carsService.GetCarsByTransmission(transmission);
+
+            if (cars.Count > 0)
+            {
+                return Ok(cars);    
+            }
+
+            return NoContent();
         }
 
         [HttpGet("year/{year}")]
         public IActionResult GetByYear(int year)
         {
-            return Ok(_carsService.GetCarsByYear(year));
+            var cars = _carsService.GetCarsByYear(year);
+
+            if (cars.Count > 0)
+            {
+                return Ok(cars);    
+            }
+
+            return NoContent();
         }
         
         [HttpGet("engine/{engine}")]
         public IActionResult GetByEngine(string engine)
         {
-            return Ok(_carsService.GetCarsByEngine(engine));
+            var cars = _carsService.GetCarsByEngine(engine);
+            
+            if (cars.Count > 0)
+            {
+                return Ok(cars);    
+            }
+
+            return NoContent();
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_carsService.GetCarById(id));
+            var car = _carsService.GetCarById(id);
+
+            if (car != null)
+            {
+                return Ok(car);    
+            }
+
+            return NoContent();
         }
     }
 }
