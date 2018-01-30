@@ -13,7 +13,7 @@ namespace ToyotaApi.Controllers
             _carsService = carsService;
         }
         
-        [HttpGet()]
+        [HttpGet]
         public IActionResult Get()
         {
             return Ok(_carsService.GetCars());
