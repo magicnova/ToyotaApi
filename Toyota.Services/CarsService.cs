@@ -21,7 +21,7 @@ namespace Toyota.Services
 
         public IList<Car> GetCarsByModel(string model)
         {
-            throw new System.NotImplementedException();
+            return _carsRepository.GetCarsByModel(model);
         }
 
         public IList<Car> GetCarsByYear(int year)

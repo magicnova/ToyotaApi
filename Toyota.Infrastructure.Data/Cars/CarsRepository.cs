@@ -19,7 +19,7 @@ namespace Toyota.Infrastructure.Data.Cars
             var factory = new CarsFactory();
             var cars = factory.CreateCars();
             
-            return cars.Where(where => where.Model == model).ToList();
+            return cars.Where(where => where.Model.ToLower() == model.ToLower()).ToList();
         }
 
         public IList<Car> GetCarsByYear(int year)
