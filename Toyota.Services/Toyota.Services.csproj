@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toyota.Domain\Toyota.Domain.csproj" />
+    <ProjectReference Include="..\Toyota.Infrastructure.Data\Toyota.Infrastructure.Data.csproj" />
+  </ItemGroup>
+</Project>
