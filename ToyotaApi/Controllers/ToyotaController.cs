@@ -36,5 +36,11 @@ namespace ToyotaApi.Controllers
         {
             return Ok(_carsService.GetCarsByYear(year));
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(_carsService.GetCarById(id));
+        }
     }
 }

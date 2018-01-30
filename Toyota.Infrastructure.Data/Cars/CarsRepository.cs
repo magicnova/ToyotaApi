@@ -42,7 +42,7 @@ namespace Toyota.Infrastructure.Data.Cars
             var factory = new CarsFactory();
             var cars = factory.CreateCars();
 
-            return cars.First(where => where.Id == id);
+            return cars.FirstOrDefault(where => where.Id == id);
         }
     }
 }

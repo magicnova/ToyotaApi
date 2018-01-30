@@ -36,7 +36,7 @@ namespace Toyota.Services
 
         public Car GetCarById(int id)
         {
-            throw new System.NotImplementedException();
+            return _carsRepository.GetCarById(id);
         }
     }
 }
