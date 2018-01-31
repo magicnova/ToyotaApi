@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Toyota.Domain;
 using Toyota.Domain.Interfaces;
 
 namespace ToyotaApi.Controllers
@@ -14,81 +16,39 @@ namespace ToyotaApi.Controllers
         }
         
         [HttpGet]
-        public IActionResult Get()
+        public IList<Car> Get()
         {
-            var cars = _carsService.GetCars();
-            
-            if (cars.Count > 0)
-            {
-                return Ok();    
-            }
-
-            return NoContent();
+           return _carsService.GetCars();
         }
 
         [HttpGet("model/{model}")]
-        public IActionResult GetByModel(string model)
+        public IList<Car> GetByModel(string model)
         {
-            var cars = _carsService.GetCarsByModel(model);
-
-            if (cars.Count > 0)
-            {
-                return Ok(cars);    
-            }
-            
-            return NoContent();
+            return _carsService.GetCarsByModel(model);
         }
         
         [HttpGet("transmission/{transmission}")]
-        public IActionResult GetByTransmission(string transmission)
+        public IList<Car> GetByTransmission(string transmission)
         {
-            var cars = _carsService.GetCarsByTransmission(transmission);
-
-            if (cars.Count > 0)
-            {
-                return Ok(cars);    
-            }
-
-            return NoContent();
+          return _carsService.GetCarsByTransmission(transmission);
         }
 
         [HttpGet("year/{year}")]
-        public IActionResult GetByYear(int year)
+        public IList<Car> GetByYear(int year)
         {
-            var cars = _carsService.GetCarsByYear(year);
-
-            if (cars.Count > 0)
-            {
-                return Ok(cars);    
-            }
-
-            return NoContent();
+            return _carsService.GetCarsByYear(year);
         }
         
         [HttpGet("engine/{engine}")]
-        public IActionResult GetByEngine(string engine)
+        public IList<Car> GetByEngine(string engine)
         {
-            var cars = _carsService.GetCarsByEngine(engine);
-            
-            if (cars.Count > 0)
-            {
-                return Ok(cars);    
-            }
-
-            return NoContent();
+            return _carsService.GetCarsByEngine(engine);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public Car GetById(int id)
         {
-            var car = _carsService.GetCarById(id);
-
-            if (car != null)
-            {
-                return Ok(car);    
-            }
-
-            return NoContent();
+            return _carsService.GetCarById(id);
         }
     }
 }
