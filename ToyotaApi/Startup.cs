@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System.IO;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.PlatformAbstractions;
+using Swashbuckle.AspNetCore.Swagger;
 using Toyota.IoC;
 
 namespace ToyotaApi
@@ -23,6 +26,14 @@ namespace ToyotaApi
         {
             services.AddMvc();
             new Container().Module(services);
+                      
+          services.AddSwaggerGen(swagger =>
+            {
+                swagger.SwaggerDoc("v1", new Info { Title = "Toyota API", Version = "v1"});
+                swagger.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "ToyotaApi.xml"));
+
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +45,13 @@ namespace ToyotaApi
             }
 
             app.UseMvc();
+            app.UseSwagger();
+            
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Toyota API V1");
+            });
+           
         }
     }
 }
