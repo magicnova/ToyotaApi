@@ -29,7 +29,7 @@ namespace ToyotaApi
                       
           services.AddSwaggerGen(swagger =>
             {
-                swagger.SwaggerDoc("v1", new Info { Title = "Toyota API", Version = "v1"});
+                swagger.SwaggerDoc("v1", new Info { Title = "Toyota API", Version = "v1",Description = "This API will return cars made by Toyota. No Database is required!"});
                 swagger.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "ToyotaApi.xml"));
 
             });
