@@ -1,4 +1,4 @@
-# Toyota Api!
+# Toyota Api! [![Build Status](https://travis-ci.org/magicnova/ToyotaApi.svg?branch=master)](https://travis-ci.org/magicnova/ToyotaApi)
 
  - Developed using Net Core V 2.14, it runs on Localhost:5000 by default.
  - No database is required
