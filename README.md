@@ -15,5 +15,5 @@
 - /api/toyota/{id} : **GetById**
 
 
-## TODO
-- Add Swagger
+## Swagger
+- Go to Localhost:5000/swagger
