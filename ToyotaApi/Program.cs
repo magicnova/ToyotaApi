@@ -16,11 +16,14 @@ namespace ToyotaApi
         {
             BuildWebHost(args).Run();
         }
-
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseKestrel()
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            return WebHost.CreateDefaultBuilder(args)
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
+                .UseIISIntegration()
+                .UseKestrel()
                 .Build();
+        }
     }
 }

@@ -14,7 +14,8 @@ namespace ToyotaApi
         public Startup(IHostingEnvironment  env)
         {
             Configuration = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
+              .SetBasePath(env.ContentRootPath)
+                .AddEnvironmentVariables()
                 .AddJsonFile($"Config/appsettings.{env.EnvironmentName}.json")
                 .Build();
         }
